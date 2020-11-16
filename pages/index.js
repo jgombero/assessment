@@ -1,6 +1,6 @@
 const Assessment = ({}) => {
 	/**
-	 * #1. Compare two objects to determine if the first one contains property values in the second one
+	 * #1. Compare two objects to determine if the first one contains property values in the second one; for example, `person3` below is contained in `person1` below and so should be `true`, while `person3` is not contained in `person2`
 	 */
 
 	const step1 = () => {
@@ -9,13 +9,13 @@ const Assessment = ({}) => {
 			return null
 		}
 
-		const obj1 = { age: 25, hair: 'long', beard: true }
-		const obj2 = { age: 26, hair: 'short', beard: true }
-		const obj3 = { hair: 'long', beard: true }
+		const person1 = { age: 25, hair: 'long', beard: true }
+		const person2 = { age: 26, hair: 'short', beard: true }
+		const person3 = { hair: 'long', beard: true }
 
-		console.log(matches({ firstObj: obj1, secondObj: obj2 }))
-		console.log(matches({ firstObj: obj2, secondObj: obj3 }))
-		console.log(matches({ firstObj: obj3, secondObj: obj1 }))
+		console.log(matches({ firstObj: person1, secondObj: person2 }))
+		console.log(matches({ firstObj: person2, secondObj: person3 }))
+		console.log(matches({ firstObj: person3, secondObj: person1 }))
 	}
 
 	step1()
